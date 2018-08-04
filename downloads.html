@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://ldltools.github.io/index.html">
+        <link rel="canonical" href="https://ldltools.github.io/downloads.html">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>LDL Tools</title>
+        <title>Downloads - LDL Tools</title>
       
     
     
@@ -102,7 +102,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#ldl-tools" tabindex="1" class="md-skip">
+      <a href="#releases" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -124,7 +124,12 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              LDL Tools
+              <span class="md-header-nav__topic">
+                LDL Tools
+              </span>
+              <span class="md-header-nav__topic">
+                Downloads
+              </span>
             
           
         </div>
@@ -317,11 +322,45 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="downloads.html" title="Downloads" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Downloads
+      </label>
+    
+    <a href="downloads.html" title="Downloads" class="md-nav__link md-nav__link--active">
       Downloads
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#releases" title="Releases" class="md-nav__link">
+    Releases
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -375,29 +414,13 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ldlsat" title="ldlsat" class="md-nav__link">
-    ldlsat
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dsl4sc" title="dsl4sc" class="md-nav__link">
-    dsl4sc
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
-    References
+  <a href="#releases" title="Releases" class="md-nav__link">
+    Releases
   </a>
   
 </li>
@@ -418,45 +441,16 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/ldltools/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/ldltools/edit/master/docs/downloads.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="ldl-tools">LDL Tools</h1>
-<p><em>Linear Dynamic Logic on finite traces</em> (LDL<sub>f</sub>)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>
-is a recently-proposed extension of <em>Linear Temporal Logic</em> (LTL)<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>,
-a well-known propositional temporal logic introduced decades ago.
-<em>LDL Tools</em> is a collection of a variety of small programs
-ranging from those for verifying LDL<sub>f</sub> formulas
-to an experimental DSL processor for smart contract development.</p>
-<h2 id="ldlsat">ldlsat</h2>
-<p><a href="ldlsat.html#ldlsat">ldlsat</a> is a SAT solver for LDL<sub>f</sub>.</p>
-<h2 id="dsl4sc">dsl4sc</h2>
-<p><a href="dsl4sc.html">dsl4sc</a> is a small experimental domain-specific language
-for defining <em>correct</em> <a href="https://en.wikipedia.org/wiki/Smart_contract">smart contracts</a>
-in the sense that
-they are guaranteed, by construction, to meet their formally-specified requirements.
-A set of tools are provided for processing smart contracts in <a href="dsl4sc.html">dsl4sc</a>
-and deriving useful results.</p>
-<h2 id="references">References</h2>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>Giuseppe De Giacomo and Moshe Y. Vardi,
-  "Linear Temporal Logic and Linear Dynamic Logic on Finite Traces".
-  Proceedings the 23rd international joint conference on Artificial Intelligence,
-  AAAI Press,
-  Aug 2013.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>Amir Pnueli,
-  "The temporal logic of programs".
-  Proceedings of the 18th Annual Symposium on Foundations of Computer Science,
-  IEEE Press,
-  1977.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+                  <h1>Downloads</h1>
+                
+                <h2 id="releases">Releases</h2>
+<ul>
+<li><a href="https://github.com/ldltools/ldlsat/archive/v1.0.0.tar.gz">ldlsat-1.0.0</a></li>
+<li><a href="https://github.com/ldltools/dsl4sc/archive/v1.0.0.tar.gz">dsl4sc-1.0.0</a></li>
+</ul>
                 
                   
                 
@@ -473,6 +467,41 @@ and deriving useful results.</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="dsl4sc.html" title="dsl4sc" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                dsl4sc
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="publications.html" title="Publications" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Publications
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
