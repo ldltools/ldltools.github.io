@@ -513,7 +513,7 @@ and returns either <em>valid</em>, <em>satisfiable</em>, or <em>unsatisfiable</e
 <a href="dsl4sc.html#rulesmc">rulesmc</a> checks whether <mark><em>model</em> ⊨ <em>property</em></mark> (entailment) holds or not.<br />
 In case you need to examine if <em>property</em> <em>can</em> hold,
 that is,
-<em>model</em> ∧ <em>property</em> is satisfiable (reachability),
+<mark><em>model</em> ∧ <em>property</em></mark> is satisfiable (reachability),
 invoke <em>rulesmc</em> with the <mark>--reachability</mark> option.</p>
 <h3 id="rules2scxml">rules2scxml</h3>
 <p>usage: <mark>rules2scxml &lt;<em>contract</em>&gt;.rules</mark></p>
@@ -521,22 +521,26 @@ invoke <em>rulesmc</em> with the <mark>--reachability</mark> option.</p>
 into an equivalent <a href="https://www.omg.org/spec/UML/">UML statechart</a> representation
 in the <a href="https://www.w3.org/TR/scxml/">SCXML</a> format.</p>
 <p>As a remark, <em>rules2scxml</em> performs translation
-through several <a href="https://github.com/ldltools/dsl4sc/docs/images/flow.svg?sanitize=true">intermediate stages</a>,
+through several <a href="https://github.com/ldltools/dsl4sc/tools/rules2scxml/docs/images/flow.svg?sanitize=true">intermediate stages</a>,
 at each of which translation can be terminated.
-Refer to <a href="https://github.com/ldltools/dsl4sc/tools/rules2scxml">this</a> for the detail.</p>
+Refer to <a href="https://github.com/ldltools/dsl4sc/tools/rules2scxml/README.md">this</a> for the detail.</p>
 <h2 id="contracts-in-dsl4sc">Contracts in DSL4SC</h2>
 <p>Each contract definition should conform to <a href="grammars/dsl4sc_grammar.html">the DSL4SC grammar</a>.</p>
 <details>
-<summary>DSL4SC grammar (alt: [html](grammars/dsl4sc_grammar.html) [pdf](grammars/dsl4sc_grammar.pdf))</summary>
-<div>![dsl4sc_grammar](grammars/dsl4sc_grammar.svg?sanitize=true)</div>
+<summary>DSL4SC grammar (alt: <a href="grammars/dsl4sc_grammar.html">html</a> <a = href="grammars/dsl4sc_grammar.pdf">pdf</a>)</summary>
+<div>
+<img src="grammars/dsl4sc_grammar.svg?sanitize=true"/>
+</div>
 </details>
 
 <p>As a remark, there exists another simplified version of the grammar,
 called <a href="grammars/dsl4sc_core_grammar.html">the DSL4SC core grammar</a>,
 which is used internally by the tools listed above.</p>
 <details>
-<summary>DSL4SC core grammar (alt: [html](grammars/dsl4sc_core_grammar.html) [pdf](grammars/dsl4sc_core_grammar.pdf))</summary>
-<div>![dsl4sc_core_grammar](grammars/dsl4sc_core_grammar.svg?sanitize=true)</div>
+<summary>DSL4SC core grammar (alt: <a href="grammars/dsl4sc_core_grammar.html">html</a> <a href="grammars/dsl4sc_core_grammar.pdf">pdf</a>)</summary>
+<div>
+<img src="grammars/dsl4sc_core_grammar.svg?sanitize=true"/>
+</div>
 </details>
                 
                   
