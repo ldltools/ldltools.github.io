@@ -377,6 +377,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#scmlrun" title="scmlrun" class="md-nav__link">
+    scmlrun
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" title="References" class="md-nav__link">
     References
   </a>
@@ -413,12 +420,16 @@ in an experimental LDL<sub>f</sub>-based DSL.</p>
 <h2 id="ldlsat">ldlsat</h2>
 <p><a href="ldlsat.html#ldlsat">ldlsat</a> is a SAT solver for LDL<sub>f</sub>.</p>
 <h2 id="dsl4sc">dsl4sc</h2>
-<p><a href="publications.html">DSL4SC</a> is a small experimental LDL<sub>f</sub>-based domain-specific language
+<p><a href="publications.html#bc2018">DSL4SC</a> is a small experimental LDL<sub>f</sub>-based domain-specific language
 for defining <em>correct</em> event-processing systems
 in the sense that
 they are guaranteed, by construction, to meet their formally-specified requirements.</p>
-<p>A set of tools are provided for static formal verification of dsl4sc programs
-and their translation to SCXML.</p>
+<p>A set of tools are provided for DSL4SC processing,
+including <a href="dsl4sc.html#rulessat">rulessat</a> for static formal verification and
+<a href="dsl4sc.html#rules2scxml">rules2scxml</a> for translation from DSL4SC to SCXML.</p>
+<h2 id="scmlrun">scmlrun</h2>
+<p><a href="scxmlrun.html">scxmlrun</a> is a MQTT-enabled <a href="https://www.w3.org/TR/scxml/">SCXML</a> processor.
+Each SCXML process can send/receive events via <a href="https://mqtt.org/">MQTT</a>.</p>
 <h2 id="references">References</h2>
 <div class="footnote">
 <hr />
