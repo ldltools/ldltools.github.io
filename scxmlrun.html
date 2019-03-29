@@ -103,7 +103,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#commands" tabindex="1" class="md-skip">
+      <a href="#command-line-tools" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -314,8 +314,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
+  <a href="#command-line-tools" title="Command-line tools" class="md-nav__link">
+    Command-line tools
   </a>
   
     <nav class="md-nav">
@@ -324,6 +324,13 @@
           <li class="md-nav__item">
   <a href="#scxmlrun" title="scxmlrun" class="md-nav__link">
     scxmlrun
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scxmlrun-all" title="scxmlrun-all" class="md-nav__link">
+    scxmlrun-all
   </a>
   
 </li>
@@ -416,8 +423,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
+  <a href="#command-line-tools" title="Command-line tools" class="md-nav__link">
+    Command-line tools
   </a>
   
     <nav class="md-nav">
@@ -426,6 +433,13 @@
           <li class="md-nav__item">
   <a href="#scxmlrun" title="scxmlrun" class="md-nav__link">
     scxmlrun
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scxmlrun-all" title="scxmlrun-all" class="md-nav__link">
+    scxmlrun-all
   </a>
   
 </li>
@@ -456,25 +470,25 @@
                 
                   <h1>scxmlrun</h1>
                 
-                <p><em>scxmlrun</em> is a MQTT-enabled <a href="https://www.w3.org/TR/scxml/">SCXML</a> processor
+                <p><a href="https://github.com/ldltools/scxmlrun"><em>scxmlrun</em></a>
+is a MQTT-enabled <a href="https://www.w3.org/TR/scxml/">SCXML</a> processor
 written in C++
 with the following features:</p>
 <ul>
 <li>it is built on top of <a href="https://doc.qt.io/qt-5/qtscxml-overview.html">QtSCXML</a>  </li>
-<li>it can be used as a command-line program that reads from and writes to local files.</li>
-<li>input/output events can be transmitted over the network via the <a href="https://mqtt.org/">MQTT</a> protocol.  </li>
-<li>the underlying <a href="http://doc.qt.io/qt-5/qjsengine.html">JavaScript engine</a> is extended with several new built-in primitives including:
-  __<em>raiseEvent</em> (<em>event</em>, <em>data</em>) and __<em>sendEvent</em> (<em>event</em>, <em>data</em>)</li>
+<li>it can be used as a command-line program that simply reads from and writes to local files.</li>
+<li>input/output events can also be received/transmitted over the network via the <a href="https://mqtt.org/">MQTT</a> protocol.  </li>
+<li>several JavaScript functions, including <code>SCXML.raise</code> and <code>SCXML.send</code> for raising/sending events in the JSON format,
+  are introduced for interfacing with the underlying SCXML/<a href="http://doc.qt.io/qt-5/qjsengine.html">JavaScript</a> engine.</li>
 </ul>
-<h2 id="commands">Commands</h2>
+<h2 id="command-line-tools">Command-line tools</h2>
 <h3 id="scxmlrun">scxmlrun</h3>
-<p>usage: <mark>scxmlrun &lt;<em>option</em>&gt;* &lt;<em>model</em>&gt;.scxml? &lt;<em>in_events</em>&gt;.in?</mark></p>
-<p><em>scxmlrun</em> can receive and send events through files or MQTT messages.<br />
-For simple file-based i/o, invoke <em>scxmlrun</em> as follows.</p>
-<p><mark>scxmlrun &lt;<em>model</em>&gt;.scxml &lt;<em>in_events</em>&gt;.in -o &lt;<em>out_events</em>&gt;.out</mark></p>
-<p>When interacting with external programs via MQTT,
-invoke <em>scxmlrun</em> as follows.</p>
-<p><mark>scxmlrun &lt;<em>model</em>&gt;.scxml --mqtt &lt;<em>host</em>&gt; --sub &lt;<em>in_topic</em>&gt; --pub &lt;<em>out_topic</em>&gt;</mark></p>
+<p>This program is for running a single SCXML process.<br />
+The input and output of the process are both SCXML events in the JSON format.</p>
+<p>See <a href="docs/man/scxmlrun.html">this manual</a> for its usage.</p>
+<h3 id="scxmlrun-all">scxmlrun-all</h3>
+<p>This is a helper tool for running <em>a set of SCXML (and non-SCXML) processes</em> in parallel
+that communicate with each other via MQTT.</p>
                 
                   
                 

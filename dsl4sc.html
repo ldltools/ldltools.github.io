@@ -103,7 +103,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#commands" tabindex="1" class="md-skip">
+      <a href="#command-line-tools" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -302,8 +302,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
+  <a href="#command-line-tools" title="Command-line tools" class="md-nav__link">
+    Command-line tools
   </a>
   
     <nav class="md-nav">
@@ -336,8 +336,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contracts-in-dsl4sc" title="Contracts in DSL4SC" class="md-nav__link">
-    Contracts in DSL4SC
+  <a href="#models-in-dsl4sc" title="Models in DSL4SC" class="md-nav__link">
+    Models in DSL4SC
   </a>
   
 </li>
@@ -437,8 +437,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
+  <a href="#command-line-tools" title="Command-line tools" class="md-nav__link">
+    Command-line tools
   </a>
   
     <nav class="md-nav">
@@ -471,8 +471,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contracts-in-dsl4sc" title="Contracts in DSL4SC" class="md-nav__link">
-    Contracts in DSL4SC
+  <a href="#models-in-dsl4sc" title="Models in DSL4SC" class="md-nav__link">
+    Models in DSL4SC
   </a>
   
 </li>
@@ -498,35 +498,37 @@
                 
                   <h1>dsl4sc</h1>
                 
-                <p><a href="publications.html#bc2018">DSL4SC</a> is a small experimental LDL<sub>f</sub>-based domain-specific language
-for defining <em>correct</em>  event-processing systems
-that are guaranteed to meet their formally-specified requirements.</p>
-<h2 id="commands">Commands</h2>
+                <p><a href="https://github.com/ldltools/dsl4sc"><em>dsl4sc</em></a> is a domain-specific language,
+based on <a href="https://www.cs.rice.edu/~vardi/">LDL<sub>f</sub></a>,
+for defining and verifying state transition models for event processing.</p>
+<h2 id="command-line-tools">Command-line tools</h2>
 <h3 id="rulessat">rulessat</h3>
-<p>usage: <mark>rulessat &lt;<em>contract</em>&gt;.rules</mark></p>
+<p>usage: <mark>rulessat &lt;<em>model</em>&gt;.rules</mark></p>
 <p><a href="dsl4sc.html#rulessat">rulessat</a>
-solves the satisfiability of the input <a href="dsl4sc.html#contracts-in-dsl4sc">DSL4SC</a> contract
-included in <mark>&lt;<em>contract</em>&gt;.rules</mark>
+solves the satisfiability of the input <a href="dsl4sc.html#models-in-dsl4sc">DSL4SC</a> model
+included in <mark>&lt;<em>model</em>&gt;.rules</mark>
 and returns either <em>valid</em>, <em>satisfiable</em>, or <em>unsatisfiable</em>.</p>
+<p>See <a href="docs/man/rulessat.html">this manual</a> for the detail.</p>
 <h3 id="rulesmc">rulesmc</h3>
 <p>usage: <mark>rulesmc -m &lt;<em>model</em>&gt;.rules &lt;<em>property</em>&gt;.rules</mark></p>
-<p>Given a <em>model</em> and a <em>property</em> contract in <a href="dsl4sc.html#contracts-in-dsl4sc">DSL4SC</a>,
+<p>Given a <em>model</em> and a <em>property</em> in <a href="dsl4sc.html#models-in-dsl4sc">DSL4SC</a>,
 <a href="dsl4sc.html#rulesmc">rulesmc</a> checks whether <mark><em>model</em> ⊨ <em>property</em></mark> (entailment) holds or not.<br />
 In case you need to examine if <em>property</em> <em>can</em> hold,
 that is,
 <mark><em>model</em> ∧ <em>property</em></mark> is satisfiable (reachability),
 invoke <em>rulesmc</em> with the <mark>--reachability</mark> option.</p>
+<p>See <a href="docs/man/rulesmc.html">this manual</a> for the detail.</p>
 <h3 id="rules2scxml">rules2scxml</h3>
-<p>usage: <mark>rules2scxml &lt;<em>contract</em>&gt;.rules</mark></p>
-<p><a href="dsl4sc.html#rules2scxml">rules2scxml</a> translates the input <a href="dsl4sc.html#contracts-in-dsl4sc">DSL4SC</a> contract
+<p>usage: <mark>rules2scxml &lt;<em>model</em>&gt;.rules</mark></p>
+<p><a href="dsl4sc.html#rules2scxml">rules2scxml</a> translates the input <a href="dsl4sc.html#models-in-dsl4sc">DSL4SC</a> model
 into an equivalent <a href="https://www.omg.org/spec/UML/">UML statechart</a> representation
 in the <a href="https://www.w3.org/TR/scxml/">SCXML</a> format.</p>
 <p>As a remark, <em>rules2scxml</em> performs translation
 through several <a href="https://github.com/ldltools/dsl4sc/blob/master/tools/rules2scxml/docs/images/flow.svg">intermediate stages</a>,
 at each of which translation can be terminated.
 Refer to <a href="https://github.com/ldltools/dsl4sc/tree/master/tools/rules2scxml">this</a> for the detail.</p>
-<h2 id="contracts-in-dsl4sc">Contracts in DSL4SC</h2>
-<p>Each contract definition should conform to <a href="grammars/dsl4sc_grammar.html">the DSL4SC grammar</a>.</p>
+<h2 id="models-in-dsl4sc">Models in DSL4SC</h2>
+<p>Each model definition should conform to <a href="grammars/dsl4sc_grammar.html">the DSL4SC grammar</a>.</p>
 <details>
 <summary>DSL4SC grammar (alt: <a href="grammars/dsl4sc_grammar.html">html</a> <a = href="grammars/dsl4sc_grammar.pdf">pdf</a>)</summary>
 <div>
